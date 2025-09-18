@@ -1,0 +1,257 @@
+/* Global reset + font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f6f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;   /* stays on top while scrolling */
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2b7dfa;
+}
+
+.navlinks a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+.navlinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #2b7dfa;
+  transition: width 0.3s;
+}
+.navlinks a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #2b7dfa;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #1a5dc9;
+  transform: scale(1.05);
+}
+
+.btn.login {
+  background: #fff;
+  color: #2b7dfa;
+  border: 2px solid #2b7dfa;
+}
+.btn.login:hover {
+  background: #2b7dfa;
+  color: #fff;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #2b7dfa, #00c6ff);
+  color: white;
+  /*fade in  and animate*/
+  opacity: 0; /* start invisible */
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.1s; /* hero comes first */
+
+
+}
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== Cards (Intro + Contact) ===== */
+/*.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card h2 {
+  margin-bottom: 15px;
+  color: #2b7dfa;
+}*/ 
+
+/*Fade in animation for cards (Intro + Contact) */
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  opacity: 0; /* start hidden */
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.4s; /* after hero */
+}
+.card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.8;
+}
+
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+  margin-top: 40px;
+}
+/* ===== Features Section ===== */
+.features {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+.features h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #2b7dfa;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.feature-card .icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+/* ===== CTA Section ===== */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #2b7dfa, #1a5ec8);
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.cta .btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.cta .btn:hover {
+  transform: scale(1.05);
+  background: #0f4ca3;
+}

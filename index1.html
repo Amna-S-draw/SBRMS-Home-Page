@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SBRMS Home</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="topnav">
+    <div class="logo">SBRMS</div>
+    <nav class="navlinks">
+      <a href="#">Home</a>
+      <a href="#">Leaderboard</a>
+      <a href="#">Certificates</a>
+      <a href="#">Help</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn primary">+ Add Point</button>
+      <div class="profile">👤</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Recognize and reward positive student behaviour</h1>
+    <p>Search student or class:</p>
+    <input placeholder="e.g., Class 10A or Alice" />
+  </div>
+
+  <!-- Main Grid -->
+  <main class="grid">
+    <!-- Left Column -->
+    <div class="col left">
+      <div class="card add-point">
+        <h3>Recognize a student</h3>
+        <select>
+          <option>Class 10A</option>
+          <option>Class 10B</option>
+        </select>
+        <input placeholder="Student name" />
+        <div class="categories">
+          <button class="chip">Kindness</button>
+          <button class="chip">Teamwork</button>
+        </div>
+        <button class="btn primary">Add Point</button>
+      </div>
+
+      <div class="card recent">
+        <h3>Recent Actions</h3>
+        <ul>
+          <li>Mr. Lee → Sam (Kindness)</li>
+          <li>Ms. Diaz → Ana (Teamwork)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Middle Column -->
+    <div class="col mid">
+      <div class="card leaderboard">
+        <h3>Leaderboard</h3>
+        <ol>
+          <li>Alice — 120</li>
+          <li>Brian — 112</li>
+          <li>Clara — 99</li>
+        </ol>
+        <a href="#">View full leaderboard</a>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="col right">
+      <div class="card certs">
+        <h3>Certificates</h3>
+        <button class="btn">Generate PDFs</button>
+        <button class="btn">Send to Parents</button>
+        <div class="log">Last sent: Sam · Sent</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © School — v0.1 · Privacy · Support
+  </footer>
+</body>
+</html>
